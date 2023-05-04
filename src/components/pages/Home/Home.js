@@ -1,6 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
-function Home() {
+const Home = () => {
+  const navigate = useNavigate();
+  const startGame = (event) => {
+    navigate("/game");
+  };
   return (
     <>
       <p>
@@ -9,8 +14,15 @@ function Home() {
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
         commodo consequat.
       </p>
+      <button
+        type="submit"
+        className="btn btn-primary mb-3"
+        onClick={startGame}
+      >
+        Let's Play!
+      </button>
     </>
   );
-}
+};
 
 export default Home;
