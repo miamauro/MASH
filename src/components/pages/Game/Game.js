@@ -12,6 +12,11 @@ function Game() {
   const [career2, setCareer2] = useState("");
   const [career3, setCareer3] = useState("");
   const [career4, setCareer4] = useState("");
+  const [kids, setKids] = useState([]);
+  const [kids1, setKids1] = useState("");
+  const [kids2, setKids2] = useState("");
+  const [kids3, setKids3] = useState("");
+  const [kids4, setKids4] = useState("");
 
   const addSpouse = (spouse1, spouse2, spouse3, spouse4) => {
     setSpouse([spouse1, spouse2, spouse3, spouse4]);
@@ -19,25 +24,37 @@ function Game() {
   const addCareer = (career1, career2, career3, career4) => {
     setCareer([career1, career2, career3, career4]);
   };
+  const addKids = (kids1, kids2, kids3, kids4) => {
+    setKids([kids1, kids2, kids3, kids4]);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     addSpouse(spouse1, spouse2, spouse3, spouse4);
     addCareer(career1, career2, career3, career4);
+    addKids(kids1, kids2, kids3, kids4);
 
     const generateRandomSpouse = () => {
       var randomSpouse = parseInt(Math.random() * 4, 10);
       var selectedSpouse = spouse[randomSpouse];
       localStorage.setItem("spouse", JSON.stringify(selectedSpouse));
     };
+
     const generateRandomCareer = () => {
       var randomCareer = parseInt(Math.random() * 4, 10);
       var selectedCareer = career[randomCareer];
       localStorage.setItem("career", JSON.stringify(selectedCareer));
     };
 
+    const generateRandomKids = () => {
+      var randomKids = parseInt(Math.random() * 4, 10);
+      var selectedKids = kids[randomKids];
+      localStorage.setItem("kids", JSON.stringify(selectedKids));
+    };
+
     generateRandomSpouse();
     generateRandomCareer();
+    generateRandomKids();
   };
 
   return (
@@ -136,24 +153,32 @@ function Game() {
             type="text"
             className="form-control mb-3"
             id="kids1"
+            value={kids1}
+            onChange={(event) => setKids1(event.target.value)}
             aria-describedby="kids1"
           />
           <input
             type="text"
             className="form-control mb-3"
             id="kids2"
+            value={kids2}
+            onChange={(event) => setKids2(event.target.value)}
             aria-describedby="kids2"
           />
           <input
             type="text"
             className="form-control mb-3"
             id="kids3"
+            value={kids3}
+            onChange={(event) => setKids3(event.target.value)}
             aria-describedby="kids3"
           />
           <input
             type="text"
             className="form-control mb-3"
             id="kids4"
+            value={kids4}
+            onChange={(event) => setKids4(event.target.value)}
             aria-describedby="kids4"
           />
         </div>
