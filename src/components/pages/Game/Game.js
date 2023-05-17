@@ -1,8 +1,9 @@
 import { useState, React } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Game.css";
 
 function Game() {
-  const mash = ["mansion", "apartment", "shack", "house"]
+  const mash = ["mansion", "apartment", "shack", "house"];
   const [spouse, setSpouse] = useState([]);
   const [spouse1, setSpouse1] = useState("");
   const [spouse2, setSpouse2] = useState("");
@@ -54,7 +55,7 @@ function Game() {
   };
 
   const writeStory = (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     addSpouse(spouse1, spouse2, spouse3, spouse4);
     addState(state1, state2, state3, state4);
     addCareer(career1, career2, career3, career4);
@@ -112,6 +113,12 @@ function Game() {
     generateRandomCar();
   };
 
+  const navigate = useNavigate();
+  const showStory = (event) => {
+    writeStory();
+    navigate("/story");
+  };
+
   return (
     <>
       <form className="mb-3 container" id="inputSpouses">
@@ -152,7 +159,12 @@ function Game() {
             aria-describedby="spouse4"
           />
         </div>
-        <a type="submit" class="btn btn-primary mb-3" href="#inputCareers">
+        <a
+          type="button"
+          class="btn btn-primary mb-3"
+          href="#inputStates"
+          onClick={writeStory}
+        >
           Submit
         </a>
       </form>
@@ -194,7 +206,12 @@ function Game() {
             aria-describedby="state4"
           />
         </div>
-        <a type="submit" class="btn btn-primary mb-3" href="#inputCareers">
+        <a
+          type="button"
+          class="btn btn-primary mb-3"
+          href="#inputCareers"
+          onClick={writeStory}
+        >
           Submit
         </a>
       </form>
@@ -236,7 +253,12 @@ function Game() {
             aria-describedby="career4"
           />
         </div>
-        <a type="submit" class="btn btn-primary mb-3" href="#inputKids">
+        <a
+          type="button"
+          class="btn btn-primary mb-3"
+          href="#inputKids"
+          onClick={writeStory}
+        >
           Submit
         </a>
       </form>
@@ -278,7 +300,12 @@ function Game() {
             aria-describedby="kids4"
           />
         </div>
-        <a type="submit" class="btn btn-primary mb-3" href="#inputCars">
+        <a
+          type="button"
+          class="btn btn-primary mb-3"
+          href="#inputColors"
+          onClick={writeStory}
+        >
           Submit
         </a>
       </form>
@@ -320,7 +347,12 @@ function Game() {
             aria-describedby="color4"
           />
         </div>
-        <a type="submit" class="btn btn-primary mb-3" href="#inputCars">
+        <a
+          type="button"
+          class="btn btn-primary mb-3"
+          href="#inputCars"
+          onClick={writeStory}
+        >
           Submit
         </a>
       </form>
@@ -362,15 +394,22 @@ function Game() {
             aria-describedby="car4"
           />
         </div>
-        {/* {spouse[generateRandomNumber()]} */}
-        <button
+        <a
           type="button"
-          className="btn btn-primary mb-3"
+          class="btn btn-primary mb-3"
+          href="#inputCars"
           onClick={writeStory}
         >
-          Write My Story
-        </button>
+          Submit
+        </a>
       </form>
+      <button
+        type="button"
+        className="btn btn-primary mb-3"
+        onClick={showStory}
+      >
+        Write My Story
+      </button>
     </>
   );
 }
