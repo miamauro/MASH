@@ -2,11 +2,17 @@ import { useState, React } from "react";
 import "./Game.css";
 
 function Game() {
+  const mash = ["mansion", "apartment", "shack", "house"]
   const [spouse, setSpouse] = useState([]);
   const [spouse1, setSpouse1] = useState("");
   const [spouse2, setSpouse2] = useState("");
   const [spouse3, setSpouse3] = useState("");
   const [spouse4, setSpouse4] = useState("");
+  const [state, setState] = useState([]);
+  const [state1, setState1] = useState("");
+  const [state2, setState2] = useState("");
+  const [state3, setState3] = useState("");
+  const [state4, setState4] = useState("");
   const [career, setCareer] = useState([]);
   const [career1, setCareer1] = useState("");
   const [career2, setCareer2] = useState("");
@@ -17,9 +23,22 @@ function Game() {
   const [kids2, setKids2] = useState("");
   const [kids3, setKids3] = useState("");
   const [kids4, setKids4] = useState("");
+  const [color, setColor] = useState([]);
+  const [color1, setColor1] = useState("");
+  const [color2, setColor2] = useState("");
+  const [color3, setColor3] = useState("");
+  const [color4, setColor4] = useState("");
+  const [car, setCar] = useState([]);
+  const [car1, setCar1] = useState("");
+  const [car2, setCar2] = useState("");
+  const [car3, setCar3] = useState("");
+  const [car4, setCar4] = useState("");
 
   const addSpouse = (spouse1, spouse2, spouse3, spouse4) => {
     setSpouse([spouse1, spouse2, spouse3, spouse4]);
+  };
+  const addState = (state1, state2, state3, state4) => {
+    setState([state1, state2, state3, state4]);
   };
   const addCareer = (career1, career2, career3, career4) => {
     setCareer([career1, career2, career3, career4]);
@@ -27,17 +46,38 @@ function Game() {
   const addKids = (kids1, kids2, kids3, kids4) => {
     setKids([kids1, kids2, kids3, kids4]);
   };
+  const addColor = (color1, color2, color3, color4) => {
+    setColor([color1, color2, color3, color4]);
+  };
+  const addCar = (car1, car2, car3, car4) => {
+    setCar([car1, car2, car3, car4]);
+  };
 
-  const handleSubmit = (event) => {
+  const writeStory = (event) => {
     event.preventDefault();
     addSpouse(spouse1, spouse2, spouse3, spouse4);
+    addState(state1, state2, state3, state4);
     addCareer(career1, career2, career3, career4);
     addKids(kids1, kids2, kids3, kids4);
+    addColor(color1, color2, color3, color4);
+    addCar(car1, car2, car3, car4);
+
+    const generateRandomMash = () => {
+      var randomMash = parseInt(Math.random() * 4, 10);
+      var selectedMash = mash[randomMash];
+      localStorage.setItem("mash", JSON.stringify(selectedMash));
+    };
 
     const generateRandomSpouse = () => {
       var randomSpouse = parseInt(Math.random() * 4, 10);
       var selectedSpouse = spouse[randomSpouse];
       localStorage.setItem("spouse", JSON.stringify(selectedSpouse));
+    };
+
+    const generateRandomState = () => {
+      var randomState = parseInt(Math.random() * 4, 10);
+      var selectedState = state[randomState];
+      localStorage.setItem("state", JSON.stringify(selectedState));
     };
 
     const generateRandomCareer = () => {
@@ -52,9 +92,24 @@ function Game() {
       localStorage.setItem("kids", JSON.stringify(selectedKids));
     };
 
+    const generateRandomColor = () => {
+      var randomColor = parseInt(Math.random() * 4, 10);
+      var selectedColor = color[randomColor];
+      localStorage.setItem("color", JSON.stringify(selectedColor));
+    };
+    const generateRandomCar = () => {
+      var randomCar = parseInt(Math.random() * 4, 10);
+      var selectedCar = car[randomCar];
+      localStorage.setItem("car", JSON.stringify(selectedCar));
+    };
+
+    generateRandomMash();
     generateRandomSpouse();
+    generateRandomState();
     generateRandomCareer();
     generateRandomKids();
+    generateRandomColor();
+    generateRandomCar();
   };
 
   return (
@@ -101,7 +156,48 @@ function Game() {
           Submit
         </a>
       </form>
-
+      <form className="mb-3 container" id="inputStates">
+        <div className="col-6 mx-auto">
+          <label for="inputStates" className="form-label">
+            Enter 4 States:
+          </label>
+          <input
+            type="text"
+            className="form-control mb-3"
+            id="state1"
+            value={state1}
+            onChange={(event) => setState1(event.target.value)}
+            aria-describedby="state1"
+          />
+          <input
+            type="text"
+            className="form-control mb-3"
+            id="state2"
+            value={state2}
+            onChange={(event) => setState2(event.target.value)}
+            aria-describedby="state2"
+          />
+          <input
+            type="text"
+            className="form-control mb-3"
+            id="state3"
+            value={state3}
+            onChange={(event) => setState3(event.target.value)}
+            aria-describedby="state3"
+          />
+          <input
+            type="text"
+            className="form-control mb-3"
+            id="state4"
+            value={state4}
+            onChange={(event) => setState4(event.target.value)}
+            aria-describedby="state4"
+          />
+        </div>
+        <a type="submit" class="btn btn-primary mb-3" href="#inputCareers">
+          Submit
+        </a>
+      </form>
       <form className="mb-3 container" id="inputCareers">
         <div className="col-6 mx-auto">
           <label for="inputCareers" className="form-label">
@@ -186,6 +282,48 @@ function Game() {
           Submit
         </a>
       </form>
+      <form className="mb-3 container" id="inputColors">
+        <div className="col-6 mx-auto">
+          <label for="inputColors" className="form-label">
+            Enter 4 Colors:
+          </label>
+          <input
+            type="text"
+            className="form-control mb-3"
+            id="color1"
+            value={color1}
+            onChange={(event) => setColor1(event.target.value)}
+            aria-describedby="color1"
+          />
+          <input
+            type="text"
+            className="form-control mb-3"
+            id="color2"
+            value={color2}
+            onChange={(event) => setColor2(event.target.value)}
+            aria-describedby="color2"
+          />
+          <input
+            type="text"
+            className="form-control mb-3"
+            id="color3"
+            value={color3}
+            onChange={(event) => setColor3(event.target.value)}
+            aria-describedby="color3"
+          />
+          <input
+            type="text"
+            className="form-control mb-3"
+            id="color4"
+            value={color4}
+            onChange={(event) => setColor4(event.target.value)}
+            aria-describedby="color4"
+          />
+        </div>
+        <a type="submit" class="btn btn-primary mb-3" href="#inputCars">
+          Submit
+        </a>
+      </form>
       <form className="mb-3 container" id="inputCars">
         <div className="col-6 mx-auto">
           <label for="inputCars" className="form-label">
@@ -194,33 +332,41 @@ function Game() {
           <input
             type="text"
             className="form-control mb-3"
-            id="cars1"
-            aria-describedby="cars1"
+            id="car1"
+            value={car1}
+            onChange={(event) => setCar1(event.target.value)}
+            aria-describedby="car1"
           />
           <input
             type="text"
             className="form-control mb-3"
-            id="cars2"
-            aria-describedby="cars2"
+            id="car2"
+            value={car2}
+            onChange={(event) => setCar2(event.target.value)}
+            aria-describedby="car2"
           />
           <input
             type="text"
             className="form-control mb-3"
-            id="cars3"
-            aria-describedby="cars3"
+            id="car3"
+            value={car3}
+            onChange={(event) => setCar3(event.target.value)}
+            aria-describedby="car3"
           />
           <input
             type="text"
             className="form-control mb-3"
-            id="cars4"
-            aria-describedby="cars4"
+            id="car4"
+            value={car4}
+            onChange={(event) => setCar4(event.target.value)}
+            aria-describedby="car4"
           />
         </div>
         {/* {spouse[generateRandomNumber()]} */}
         <button
           type="button"
           className="btn btn-primary mb-3"
-          onClick={handleSubmit}
+          onClick={writeStory}
         >
           Write My Story
         </button>
