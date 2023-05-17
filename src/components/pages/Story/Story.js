@@ -6,11 +6,14 @@ const Story = () => {
   const playAgain = (event) => {
     navigate("/home");
   };
+  var spouseName = localStorage.getItem("spouse");
+  var kidsNumber = localStorage.getItem("kids");
+
   return (
     <>
       <p>
-        You live in your ___ with your spouse, ___. You have ___ kids. You drive
-        a ___.
+        You live in your ___ with your spouse, {spouseName}. You have{" "}
+        {kidsNumber} kids. You drive a ___.
       </p>
       <button
         type="submit"
