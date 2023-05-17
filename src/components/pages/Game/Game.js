@@ -7,22 +7,37 @@ function Game() {
   const [spouse2, setSpouse2] = useState("");
   const [spouse3, setSpouse3] = useState("");
   const [spouse4, setSpouse4] = useState("");
+  const [career, setCareer] = useState([]);
+  const [career1, setCareer1] = useState("");
+  const [career2, setCareer2] = useState("");
+  const [career3, setCareer3] = useState("");
+  const [career4, setCareer4] = useState("");
 
   const addSpouse = (spouse1, spouse2, spouse3, spouse4) => {
     setSpouse([spouse1, spouse2, spouse3, spouse4]);
+  };
+  const addCareer = (career1, career2, career3, career4) => {
+    setCareer([career1, career2, career3, career4]);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     addSpouse(spouse1, spouse2, spouse3, spouse4);
+    addCareer(career1, career2, career3, career4);
 
-    const generateRandomNumber = () => {
-      var test = parseInt(Math.random() * 4, 10);
-      var selectedSpouse = spouse[test];
-      localStorage.setItem("test", selectedSpouse);
+    const generateRandomSpouse = () => {
+      var randomSpouse = parseInt(Math.random() * 4, 10);
+      var selectedSpouse = spouse[randomSpouse];
+      localStorage.setItem("spouse", JSON.stringify(selectedSpouse));
+    };
+    const generateRandomCareer = () => {
+      var randomCareer = parseInt(Math.random() * 4, 10);
+      var selectedCareer = career[randomCareer];
+      localStorage.setItem("career", JSON.stringify(selectedCareer));
     };
 
-    generateRandomNumber();
+    generateRandomSpouse();
+    generateRandomCareer();
   };
 
   return (
@@ -79,24 +94,32 @@ function Game() {
             type="text"
             className="form-control mb-3"
             id="career1"
+            value={career1}
+            onChange={(event) => setCareer1(event.target.value)}
             aria-describedby="career1"
           />
           <input
             type="text"
             className="form-control mb-3"
             id="career2"
+            value={career2}
+            onChange={(event) => setCareer2(event.target.value)}
             aria-describedby="career2"
           />
           <input
             type="text"
             className="form-control mb-3"
             id="career3"
+            value={career3}
+            onChange={(event) => setCareer3(event.target.value)}
             aria-describedby="career3"
           />
           <input
             type="text"
             className="form-control mb-3"
             id="career4"
+            value={career4}
+            onChange={(event) => setCareer4(event.target.value)}
             aria-describedby="career4"
           />
         </div>
@@ -170,9 +193,9 @@ function Game() {
         </div>
         {/* {spouse[generateRandomNumber()]} */}
         <button
-          type="submit"
+          type="button"
           className="btn btn-primary mb-3"
-          onSubmit={handleSubmit}
+          onClick={handleSubmit}
         >
           Write My Story
         </button>
