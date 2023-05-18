@@ -1,0 +1,13 @@
+.form-label {
+  color: var(--Pink);
+  font-weight: bold;
+}
+
+.form-btn {
+  margin-top: 1rem;
+}
+
+/* .test {
+  border-style: solid;
+  border-color: var(--Pink);
+} */
