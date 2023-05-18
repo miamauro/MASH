@@ -1,0 +1,23 @@
+#kids-color {
+  color: var(--Pink);
+  font-weight: bold;
+}
+
+#sleepovers {
+  color: var(--LimeGreen);
+  font-weight: bold;
+}
+
+#nostalgic {
+  color: var(--Purple);
+  font-weight: bold;
+}
+
+#fate {
+  color: var(--Pink);
+  font-weight: bold;
+}
+
+.intro {
+  padding-top: 7rem;
+}

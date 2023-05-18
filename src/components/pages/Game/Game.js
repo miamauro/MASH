@@ -208,6 +208,7 @@ function Game() {
   return (
     <>
       <form className="mb-3 container input-form" id="inputSpouses">
+        {/* <div className="row-6 test"> */}
         <div className="col-6 mx-auto">
           <label for="inputSpouses" className="form-label">
             Enter 4 Spouses:
@@ -245,9 +246,10 @@ function Game() {
             aria-describedby="spouse4"
           />
         </div>
+        {/* </div> */}
         <a
           type="button"
-          className="blue-btn btn btn-primary mb-3"
+          className="blue-btn btn form-btn btn-primary mb-3"
           href="#inputAnimals"
           onClick={writeStory}
         >
