@@ -20,7 +20,7 @@ const Story = () => {
   var name = localStorage.getItem("name").replace(/['"]/g, "");
 
   return (
-    <>
+    <div className="container vh-75">
       <p>
         You will live in a/an {mash} in {state} with your spouse, {spouseName}.
         You'll make ${salary}/year as a/an {occupation} after graduating from{" "}
@@ -30,12 +30,12 @@ const Story = () => {
       </p>
       <button
         type="submit"
-        className="btn btn-primary mb-3"
+        className="blue-btn btn btn-primary mb-3"
         onClick={playAgain}
       >
         Play Again
       </button>
-    </>
+    </div>
   );
 };
 

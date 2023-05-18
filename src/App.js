@@ -11,6 +11,10 @@ function App() {
   return (
     <>
       <Router>
+        <style>
+          @import
+          url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display&display=swap');
+        </style>
         <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />

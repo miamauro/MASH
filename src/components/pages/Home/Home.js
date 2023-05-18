@@ -7,7 +7,7 @@ const Home = () => {
     navigate("/game");
   };
   return (
-    <>
+    <div className="container vh-75">
       <p>
         For all the 90s kids, this game will bring you back to sleepovers with
         your friends, deciding your future with a paper, pencil, and the process
@@ -17,12 +17,12 @@ const Home = () => {
       </p>
       <button
         type="submit"
-        className="btn btn-primary mb-3"
+        className="blue-btn btn btn-primary mb-3"
         onClick={startGame}
       >
         Let's Play!
       </button>
-    </>
+    </div>
   );
 };
 
