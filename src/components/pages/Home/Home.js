@@ -9,10 +9,11 @@ const Home = () => {
   return (
     <>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
+        For all the 90s kids, this game will bring you back to sleepovers with
+        your friends, deciding your future with a paper, pencil, and the process
+        of elimination. This version of MASH brings the nostalgic experience
+        right to your fingertips! Proceed through the prompts and at the end,
+        the game will determine your fate!
       </p>
       <button
         type="submit"
