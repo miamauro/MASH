@@ -207,7 +207,7 @@ function Game() {
 
   return (
     <>
-      <form className="mb-3 container" id="inputSpouses">
+      <form className="mb-3 container input-form" id="inputSpouses">
         <div className="col-6 mx-auto">
           <label for="inputSpouses" className="form-label">
             Enter 4 Spouses:
@@ -247,14 +247,14 @@ function Game() {
         </div>
         <a
           type="button"
-          class="btn btn-primary mb-3"
+          className="blue-btn btn btn-primary mb-3"
           href="#inputAnimals"
           onClick={writeStory}
         >
           Submit
         </a>
       </form>
-      <form className="mb-3 container" id="inputAnimals">
+      <form className="mb-3 container input-form" id="inputAnimals">
         <div className="col-6 mx-auto">
           <label for="inputAnimals" className="form-label">
             Enter 4 Animals:
@@ -294,14 +294,14 @@ function Game() {
         </div>
         <a
           type="button"
-          class="btn btn-primary mb-3"
+          className="blue-btn btn btn-primary mb-3"
           href="#inputSalaries"
           onClick={writeStory}
         >
           Submit
         </a>
       </form>
-      <form className="mb-3 container" id="inputSalaries">
+      <form className="mb-3 container input-form" id="inputSalaries">
         <div className="col-6 mx-auto">
           <label for="inputSalaries" className="form-label">
             Enter 4 Salaries:
@@ -341,14 +341,14 @@ function Game() {
         </div>
         <a
           type="button"
-          class="btn btn-primary mb-3"
+          className="blue-btn btn btn-primary mb-3"
           href="#inputStates"
           onClick={writeStory}
         >
           Submit
         </a>
       </form>
-      <form className="mb-3 container" id="inputStates">
+      <form className="mb-3 container input-form" id="inputStates">
         <div className="col-6 mx-auto">
           <label for="inputStates" className="form-label">
             Enter 4 States:
@@ -388,14 +388,14 @@ function Game() {
         </div>
         <a
           type="button"
-          class="btn btn-primary mb-3"
+          className="blue-btn btn btn-primary mb-3"
           href="#inputCareers"
           onClick={writeStory}
         >
           Submit
         </a>
       </form>
-      <form className="mb-3 container" id="inputCareers">
+      <form className="mb-3 container input-form" id="inputCareers">
         <div className="col-6 mx-auto">
           <label for="inputCareers" className="form-label">
             Enter 4 Careers:
@@ -435,14 +435,14 @@ function Game() {
         </div>
         <a
           type="button"
-          class="btn btn-primary mb-3"
+          className="blue-btn btn btn-primary mb-3"
           href="#inputKids"
           onClick={writeStory}
         >
           Submit
         </a>
       </form>
-      <form className="mb-3 container" id="inputKids">
+      <form className="mb-3 container input-form" id="inputKids">
         <div className="col-6 mx-auto">
           <label for="inputKids" className="form-label">
             Enter 4 Numbers:
@@ -482,14 +482,14 @@ function Game() {
         </div>
         <a
           type="button"
-          class="btn btn-primary mb-3"
+          className="blue-btn btn btn-primary mb-3"
           href="#inputDestinations"
           onClick={writeStory}
         >
           Submit
         </a>
       </form>
-      <form className="mb-3 container" id="inputDestinations">
+      <form className="mb-3 container input-form" id="inputDestinations">
         <div className="col-6 mx-auto">
           <label for="inputDestinations" className="form-label">
             Enter 4 Destinations:
@@ -529,14 +529,14 @@ function Game() {
         </div>
         <a
           type="button"
-          class="btn btn-primary mb-3"
+          className="blue-btn btn btn-primary mb-3"
           href="#inputColors"
           onClick={writeStory}
         >
           Submit
         </a>
       </form>
-      <form className="mb-3 container" id="inputColors">
+      <form className="mb-3 container input-form" id="inputColors">
         <div className="col-6 mx-auto">
           <label for="inputColors" className="form-label">
             Enter 4 Colors:
@@ -576,14 +576,14 @@ function Game() {
         </div>
         <a
           type="button"
-          class="btn btn-primary mb-3"
+          className="blue-btn btn btn-primary mb-3"
           href="#inputSchools"
           onClick={writeStory}
         >
           Submit
         </a>
       </form>
-      <form className="mb-3 container" id="inputSchools">
+      <form className="mb-3 container input-form" id="inputSchools">
         <div className="col-6 mx-auto">
           <label for="inputSchools" className="form-label">
             Enter 4 Universities:
@@ -623,14 +623,14 @@ function Game() {
         </div>
         <a
           type="button"
-          class="btn btn-primary mb-3"
+          className="blue-btn btn btn-primary mb-3"
           href="#inputCars"
           onClick={writeStory}
         >
           Submit
         </a>
       </form>
-      <form className="mb-3 container" id="inputCars">
+      <form className="mb-3 container input-form" id="inputCars">
         <div className="col-6 mx-auto">
           <label for="inputCars" className="form-label">
             Enter 4 Cars:
@@ -670,14 +670,14 @@ function Game() {
         </div>
         <a
           type="button"
-          class="btn btn-primary mb-3"
+          className="blue-btn btn btn-primary mb-3"
           href="#inputNames"
           onClick={writeStory}
         >
           Submit
         </a>
       </form>
-      <form className="mb-3 container" id="inputNames">
+      <form className="mb-3 container input-form" id="inputNames">
         <div className="col-6 mx-auto">
           <label for="inputNames" className="form-label">
             Enter 4 Names:
@@ -717,8 +717,8 @@ function Game() {
         </div>
         <a
           type="button"
-          class="btn btn-primary mb-3"
-          href="#inputNames"
+          className="blue-btn btn btn-primary mb-3"
+          href="#storyBtn"
           onClick={writeStory}
         >
           Submit
@@ -726,7 +726,8 @@ function Game() {
       </form>
       <button
         type="button"
-        className="btn btn-primary mb-3"
+        className="blue-btn btn btn-primary mb-3"
+        id="storyBtn"
         onClick={showStory}
       >
         Write My Story
