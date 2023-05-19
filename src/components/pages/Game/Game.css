@@ -1,5 +1,4 @@
 .form-label {
-  color: var(--Pink);
   font-weight: bold;
 }
 
@@ -7,7 +6,42 @@
   margin-top: 1rem;
 }
 
-/* .test {
-  border-style: solid;
+#inputSpouses input,
+#inputStates input,
+#inputDestinations input,
+#inputCars input {
   border-color: var(--Pink);
-} */
+}
+
+#inputSpouses label,
+#inputStates label,
+#inputDestinations label,
+#inputCars label {
+  color: var(--Pink);
+}
+
+#inputAnimals input,
+#inputCareers input,
+#inputColors input,
+#inputNames input {
+  border-color: var(--LimeGreen);
+}
+
+#inputAnimals label,
+#inputCareers label,
+#inputColors label,
+#inputNames label {
+  color: var(--LimeGreen);
+}
+
+#inputSalaries input,
+#inputKids input,
+#inputSchools input {
+  border-color: var(--Purple);
+}
+
+#inputSalaries label,
+#inputKids label,
+#inputSchools label {
+  color: var(--Purple);
+}
