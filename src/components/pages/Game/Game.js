@@ -726,14 +726,20 @@ function Game() {
           Submit
         </a>
       </form>
-      <button
-        type="button"
-        className="blue-btn btn btn-primary mb-3"
-        id="storyBtn"
-        onClick={showStory}
-      >
-        Write My Story
-      </button>
+      <div className="container nextStory">
+        <p>
+          Now that you've entered all of your answers, are you ready to see
+          what's next?
+        </p>
+        <button
+          type="button"
+          className="blue-btn btn btn-primary"
+          id="storyBtn"
+          onClick={showStory}
+        >
+          Write My Story
+        </button>
+      </div>
     </>
   );
 }

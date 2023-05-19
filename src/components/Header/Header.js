@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../images/MASHlogo.png";
+import logo from "../images/mashlogofinal.png";
 import "../Header/Header.css";
 
 function Header() {
