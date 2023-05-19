@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fce3536b.css",
+    "main.js": "/static/js/main.aa9c3852.js",
+    "static/media/mashlogofinal.png": "/static/media/mashlogofinal.725994de21ff3b2a1db5.png",
+    "index.html": "/index.html",
+    "main.fce3536b.css.map": "/static/css/main.fce3536b.css.map",
+    "main.aa9c3852.js.map": "/static/js/main.aa9c3852.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fce3536b.css",
+    "static/js/main.aa9c3852.js"
+  ]
+}
