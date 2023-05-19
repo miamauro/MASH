@@ -1,0 +1,27 @@
+.story {
+  padding: 7rem !important;
+}
+
+#mash,
+#salary,
+#kids,
+#carColor {
+  color: var(--LimeGreen);
+  font-weight: bold;
+}
+
+#state,
+#occupation,
+#animal,
+#car {
+  color: var(--Purple);
+  font-weight: bold;
+}
+
+#spouse,
+#school,
+#name,
+#destination {
+  color: var(--Pink);
+  font-weight: bold;
+}
