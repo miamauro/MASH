@@ -5,7 +5,9 @@ import "../Header/Header.css";
 function Header() {
   return (
     <div className="sticky-top text-center" id="header-nav">
-      <img src={logo} alt="mash logo"></img>
+      <a href="/">
+        <img src={logo} alt="mash logo"></img>
+      </a>
     </div>
   );
 }

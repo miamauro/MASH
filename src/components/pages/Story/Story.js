@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "../Story/Story.css";
 
 const Story = () => {
   const navigate = useNavigate();
@@ -20,13 +21,13 @@ const Story = () => {
   var name = localStorage.getItem("name").replace(/['"]/g, "");
 
   return (
-    <div className="container vh-75">
+    <div className="container story vh-75">
       <p>
-        You will live in a/an {mash} in {state} with your spouse, {spouseName}.
-        You'll make ${salary}/year as a/an {occupation} after graduating from{" "}
-        {school}. You'll have {kidsNumber} kids and a pet {animal} named {name}.
-        You'll drive a/an {carColor} {carType}, and your family will vacation in{" "}
-        {destination} every year.
+        You will live in a/an <span id="mash">{mash}</span> in <span id="state">{state}</span> with your spouse, <span id="spouse">{spouseName}</span>.
+        You'll make <span id="salary">${salary}/year</span> as a/an <span id="occupation">{occupation}</span> after graduating from{" "}
+        <span id="school">{school}</span>. You'll have <span id="kids">{kidsNumber}</span> kids and a pet <span id="animal">{animal}</span> named <span id="name">{name}</span>.
+        You'll drive a/an <span id="carColor">{carColor}</span> <span id="car">{carType}</span>, and your family will vacation in{" "}
+        <span id="destination">{destination}</span> every year.
       </p>
       <button
         type="submit"
