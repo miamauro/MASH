@@ -10,7 +10,8 @@ const Home = () => {
   };
   return (
     <div className="container vh-75 intro">
-      <p>
+      
+      <p><span>
         For all the <span id="kids-color">90's kids</span>, this game will bring
         you back to <span id="sleepovers">sleepovers</span> with your friends,
         deciding your future with a piece of paper, a pencil, and the process of
@@ -18,7 +19,7 @@ const Home = () => {
         <span id="nostalgic">nostalgic</span> experience right to your
         fingertips! Proceed through the prompts and at the end, the game will
         determine your <span id="fate">fate</span>!
-      </p>
+        </span></p>
       <button
         type="submit"
         className="blue-btn btn btn-primary mb-3"

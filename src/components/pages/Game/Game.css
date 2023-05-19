@@ -45,3 +45,7 @@
 #inputSchools label {
   color: var(--Purple);
 }
+
+.nextStory {
+  margin: 12rem;
+}

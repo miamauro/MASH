@@ -23,10 +23,16 @@ const Story = () => {
   return (
     <div className="container story vh-75">
       <p>
-        You will live in a/an <span id="mash">{mash}</span> in <span id="state">{state}</span> with your spouse, <span id="spouse">{spouseName}</span>.
-        You'll make <span id="salary">${salary}/year</span> as a/an <span id="occupation">{occupation}</span> after graduating from{" "}
-        <span id="school">{school}</span>. You'll have <span id="kids">{kidsNumber}</span> kids and a pet <span id="animal">{animal}</span> named <span id="name">{name}</span>.
-        You'll drive a/an <span id="carColor">{carColor}</span> <span id="car">{carType}</span>, and your family will vacation in{" "}
+        You will live in a/an <span id="mash">{mash}</span> in{" "}
+        <span id="state">{state}</span> with your spouse,{" "}
+        <span id="spouse">{spouseName}</span>. You'll make{" "}
+        <span id="salary">${salary}/year</span> as a/an{" "}
+        <span id="occupation">{occupation}</span> after graduating from{" "}
+        <span id="school">{school}</span>. You'll have{" "}
+        <span id="kids">{kidsNumber}</span> kid(s) and a pet{" "}
+        <span id="animal">{animal}</span> named <span id="name">{name}</span>.
+        You'll drive a/an <span id="carColor">{carColor}</span>{" "}
+        <span id="car">{carType}</span>, and your family will vacation in{" "}
         <span id="destination">{destination}</span> every year.
       </p>
       <button
