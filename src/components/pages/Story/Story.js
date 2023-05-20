@@ -5,7 +5,7 @@ import "../Story/Story.css";
 const Story = () => {
   const navigate = useNavigate();
   const playAgain = (event) => {
-    navigate("/");
+    navigate("/MASH");
   };
   var mash = localStorage.getItem("mash").replace(/['"]/g, "");
   var spouseName = localStorage.getItem("spouse").replace(/['"]/g, "");
