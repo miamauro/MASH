@@ -202,7 +202,7 @@ function Game() {
   const navigate = useNavigate();
   const showStory = (event) => {
     writeStory();
-    navigate("/story");
+    navigate("/MASH/story");
   };
 
   return (
