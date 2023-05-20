@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/MASH/static/css/main.fce3536b.css",
-    "main.js": "/MASH/static/js/main.1d224d95.js",
+    "main.js": "/MASH/static/js/main.43c6991d.js",
     "static/media/mashlogofinal.png": "/MASH/static/media/mashlogofinal.725994de21ff3b2a1db5.png",
     "index.html": "/MASH/index.html",
     "main.fce3536b.css.map": "/MASH/static/css/main.fce3536b.css.map",
-    "main.1d224d95.js.map": "/MASH/static/js/main.1d224d95.js.map"
+    "main.43c6991d.js.map": "/MASH/static/js/main.43c6991d.js.map"
   },
   "entrypoints": [
     "static/css/main.fce3536b.css",
-    "static/js/main.1d224d95.js"
+    "static/js/main.43c6991d.js"
   ]
 }
