@@ -17,9 +17,9 @@ function App() {
         </style>
         <Header />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/game" element={<Game />} />
-          <Route exact path="/story" element={<Story />} />
+          <Route exact path="/MASH" element={<Home />} />
+          <Route exact path="/MASH/game" element={<Game />} />
+          <Route exact path="/MASH/story" element={<Story />} />
         </Routes>
         <Footer />
       </Router>
